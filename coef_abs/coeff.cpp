@@ -57,6 +57,9 @@ void coeff()
     g_myl->SetMarkerColor(1);
 
     c->cd(); g_myl->Draw("AP");
+    c->SaveAs("relrate_m.png");
+
     c1->cd(); g_kapt->Draw("AP");
+    c1->SaveAs("relrate_k.png");
 
 }
