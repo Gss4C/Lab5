@@ -40,19 +40,7 @@ void graph_town()
     
     TGraphErrors * misc1 = new TGraphErrors(5, v_m1 , alpha1 , 0 , dalpha1);
     TGraphErrors * misc2 = new TGraphErrors(8, v_m2 , alpha2 , 0 , dalpha2);
-    misc1->SetMarkerColor(2);
-    misc1->SetMarkerStyle(23);
-    misc2->SetMarkerColor(3);
-    misc2->SetMarkerStyle(22);
-
-   /* TMultiGraph * tot = new TMultiGraph();
-    tot->Add(misc1 , "AP");
-    tot->Add(misc2 , "AP");
-    tot->GetXaxis()->SetTitle("Tensione di Mesh (V)");
-    tot->GetYaxis()->SetTitle("Coefficiente di Townsend (cm^-1)");
-    tot->GetXaxis()->SetRangeUser(450, 570);
-    tot->GetYaxis()->SetRangeUser(600, 1700);
-    tot->Draw("A");*/
+    
 
 
     misc1->SetMarkerColor(4);
@@ -73,4 +61,18 @@ void graph_town()
     misc2->GetYaxis()->SetTitle("Coefficiente di Townsend (cm^-1)");
     misc2->Draw("AP");
     c1->SaveAs("coef_misc2.png");
+
+    /*TMultiGraph * tot = new TMultiGraph();
+    tot->Add(misc1 , "AP");
+    tot->Add(misc2 , "AP");
+    misc1->SetMarkerColor(2);
+    misc1->SetMarkerStyle(23);
+    misc2->SetMarkerColor(3);
+    misc2->SetMarkerStyle(22);
+    tot->GetXaxis()->SetTitle("Tensione di Mesh (V)");
+    tot->GetYaxis()->SetTitle("Coefficiente di Townsend (cm^-1)");
+    c1->SetLogy();
+    //tot->GetXaxis()->SetRangeUser(450, 570);
+    tot->GetYaxis()->SetRangeUser(100, 10000);
+    tot->Draw("A");*/
 }
